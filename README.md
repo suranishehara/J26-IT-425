@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Component 4 — Explainable Conversational Fashion AI
 
 **New laptop setup:** [Installation.md](Installation.md).
@@ -665,3 +666,6 @@ Encoder reference: Pengcheng He, Jianfeng Gao and Weizhu Chen, **DeBERTaV3: Impr
 | [NLU_DATA_COLLECTION.md](docs/NLU_DATA_COLLECTION.md) | Implemented starter schema/validation workflow |
 
 Some linked development records retain historical milestone statements. This README describes the current completed state: **live local rule/RAG/LLM chat plus a separately completed supervised native-act experiment**, with scope-specific evidence rather than a single claimed “whole-system accuracy.”
+=======
+# RP_Planner_Test_Repo
+>>>>>>> 8273d8976fe5f864e18803b60d901180dc7642ea
