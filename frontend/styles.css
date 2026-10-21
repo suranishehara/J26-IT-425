@@ -1,0 +1,65 @@
+:root{font-family:system-ui,sans-serif;color:#183f3c;background:#f5f3ef;font-size:14px}*{box-sizing:border-box}body{margin:0}header{background:#193f3c;color:#faf8f2;padding:16px 24px;display:grid;grid-template-columns:1fr auto;gap:4px 16px}header small{color:#e4be6a;letter-spacing:2px;font-size:10px}h1{font:28px Georgia,serif;margin:0;grid-column:1}header p{grid-column:2;grid-row:1/3;align-self:center;font-size:12px}main{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr) minmax(0,1.2fr);gap:12px;padding:14px;max-width:2000px;margin:auto}section{background:#fff;border:1px solid #dce2d9;border-radius:10px;padding:16px;min-width:0;overflow-wrap:anywhere}h2{font-size:16px;margin:0 0 12px}h3{font-size:14px;margin-top:20px}.hint{font-size:12px;color:#66776f;line-height:1.6}.title-row{display:flex;justify-content:space-between;align-items:center;gap:12px}.title-row button{width:auto;background:#eef2e9;color:#193f3c;padding:7px 10px}label{font-size:12px;display:block;margin:10px 0 5px}textarea,select,button{font:inherit;width:100%;border:1px solid #d1dbd0;border-radius:6px;padding:10px;color:#183f3c;background:#fafbf7}textarea{resize:vertical}button{background:#193f3c;color:white;cursor:pointer;margin-top:8px;font-weight:600}button:disabled{opacity:.5;cursor:wait}#messages{min-height:200px;overflow:auto;padding:8px 0}.message{white-space:pre-wrap;border-radius:9px;padding:13px;line-height:1.6;font-size:13px;margin:10px 0;background:#f4f6f0}.message.user{background:#e9f1ee;margin-left:30px}.message strong{display:block;font-size:11px;color:#68756a;margin-bottom:6px}#status{font-size:12px}.source{border-top:1px solid #e5e9e1;padding:12px 0;font-size:12px;line-height:1.6}.source h3{margin:0}a{color:#27665d}dt{font-size:11px;color:#65756b}dd{margin:2px 0 10px;font-size:13px}details{margin-top:20px;border-top:1px solid #e5e9e1;padding-top:12px}summary{cursor:pointer;font-size:12px}textarea:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid #bb9638;outline-offset:2px}.empty{color:#87938a;font-size:13px;line-height:1.8}@media(min-width:1100px) and (min-height:650px){body{height:100dvh;display:flex;flex-direction:column}header{flex:none}main{flex:1;min-height:0;width:100%}section{overflow:auto}.conversation{display:flex;flex-direction:column}#messages{flex:1;min-height:120px}#chat-form{flex:none}}@media(max-width:1000px){main{grid-template-columns:1fr 1fr}.conversation{grid-column:1/-1}}@media(max-width:650px){main{grid-template-columns:1fr}header{display:block}h1{margin:5px 0}header p{margin-bottom:0}}
+.engine-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px}.engine-controls label{margin:0}.engine-controls button{grid-column:1/-1;margin:0;background:#eef2e9;color:#193f3c;padding:6px}.message.streaming{border-left:3px solid #b89848}.message.streaming::after{content:' ▍';animation:cursor-blink 1s step-end infinite}#stop{background:#eef2e9;color:#193f3c}@keyframes cursor-blink{50%{opacity:0}}@media(prefers-reduced-motion:reduce){.message.streaming::after{animation:none}}@media(max-width:650px){.engine-controls{grid-template-columns:1fr}}
+
+/* Keep controls out of the transcript: four independent desktop columns. */
+main{grid-template-columns:minmax(0,2.1fr) minmax(210px,.85fr) minmax(0,1.05fr) minmax(0,1.3fr)}
+.conversation{display:flex;flex-direction:column;min-height:0}
+.conversation .title-row,.conversation #chat-form,.conversation #status{flex:none}
+.conversation #status{margin-bottom:0}
+.conversation #messages{flex:1;min-height:0;overscroll-behavior:contain}
+.conversation #messages{display:flex;flex-direction:column;overflow-anchor:none;scroll-behavior:auto}
+.conversation #messages::before{content:"";margin-top:auto}
+.conversation #messages>.message{flex:none}
+.settings .engine-controls{grid-template-columns:minmax(0,1fr);gap:12px}
+.settings .engine-controls button{grid-column:1;margin-top:0;padding:8px}
+.settings .hint{margin:12px 0 20px}
+@media(min-width:1200px) and (min-height:520px){
+  body{height:100dvh;display:flex;flex-direction:column}
+  header{flex:none}
+  main{flex:1;min-height:0;width:100%}
+  main>section{min-height:0;overflow:auto}
+  .conversation{overflow:hidden}
+}
+@media(max-width:1199px){
+  body{height:auto;display:block}
+  main{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .conversation{grid-column:1/-1}
+  .conversation #messages{flex:none;height:55dvh;min-height:280px}
+}
+@media(max-width:650px){
+  main{grid-template-columns:minmax(0,1fr)}
+  .conversation{grid-column:auto}
+  .title-row{align-items:flex-start}
+}
+@media(min-width:1200px) and (max-height:519px){
+  .conversation #messages{flex:none;height:55dvh;min-height:240px}
+}
+
+/* Narrow history rail; settings/NLP/evidence stack when five columns would crowd chat. */
+main{grid-template-columns:190px minmax(340px,2.1fr) minmax(190px,.85fr) minmax(210px,1.05fr) minmax(240px,1.3fr);max-width:2400px}
+.chat-history{background:#edf1e8;border:1px solid #dce2d9;border-radius:10px;padding:14px;min-width:0;overflow:auto}
+.chat-history h2{margin-bottom:4px}.chat-history details{margin-top:14px}
+.history-entry{padding:10px 0;border-bottom:1px solid #d6dfd1}
+.history-entry.active{border-left:3px solid #b89848;padding-left:8px}
+.history-title{margin:0;text-align:left;background:transparent;color:#193f3c;border:0;padding:4px 0;white-space:normal;overflow-wrap:anywhere;font-weight:600}
+.history-actions{display:flex;gap:6px}.history-actions button{font-size:11px;margin-top:4px;background:#fff;color:#193f3c;padding:5px;font-weight:500}
+.history-date{font-size:11px;color:#66776f;margin:4px 0}
+@media(min-width:1200px) and (min-height:520px){.chat-history{min-height:0}}
+@media(min-width:1200px) and (max-width:1599px){
+  main{grid-template-columns:180px minmax(360px,1.8fr) minmax(200px,1fr) minmax(240px,1.15fr);grid-template-rows:minmax(0,1fr) minmax(0,1fr)}
+  .chat-history{grid-column:1;grid-row:1/3}
+  .conversation{grid-column:2;grid-row:1/3}
+  .settings{grid-column:3;grid-row:1}
+  section[aria-labelledby="understanding-title"]{grid-column:3;grid-row:2}
+  section[aria-labelledby="evidence-title"]{grid-column:4;grid-row:1/3}
+}
+@media(max-width:1199px){
+  main{grid-template-columns:180px minmax(0,1fr)}
+  .chat-history{grid-column:1;grid-row:1/5;max-height:calc(100dvh - 120px);position:sticky;top:12px}
+  .conversation,.settings,section[aria-labelledby="understanding-title"],section[aria-labelledby="evidence-title"]{grid-column:2;grid-row:auto}
+}
+@media(max-width:650px){
+  main{grid-template-columns:minmax(0,1fr)}
+  .chat-history{position:static;grid-column:1;grid-row:auto;max-height:230px}
+  .conversation,.settings,section[aria-labelledby="understanding-title"],section[aria-labelledby="evidence-title"]{grid-column:1}
+}

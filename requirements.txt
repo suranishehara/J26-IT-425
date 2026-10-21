@@ -1,0 +1,2 @@
+# Initial baseline uses Python 3.12 standard library only.
+# Neural retrieval, reranking and LLM dependencies will be isolated here later.

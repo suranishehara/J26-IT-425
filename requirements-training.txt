@@ -1,0 +1,7 @@
+# Optional experiment dependencies; not needed to serve the chatbot.
+# CUDA PyTorch >=2.6 is separately installed, or supplied by explicit --torch-site.
+scikit-learn==1.7.2
+transformers==4.57.1
+sentencepiece==0.2.1
+safetensors>=0.4.3
+protobuf>=4,<7

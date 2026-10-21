@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fashion chatbot · Message collection</title><style>body{font:16px system-ui,sans-serif;max-width:900px;margin:24px auto;padding:0 16px;color:#193f3c;background:#f5f3ef}section{background:white;padding:20px;border:1px solid #d9e0d8;border-radius:8px;margin:18px 0}h1{font-size:26px}h2{font-size:19px}label{display:block;margin-top:14px}input,select,textarea,button{font:inherit;padding:10px;border:1px solid #b9cbbb;border-radius:5px}textarea{width:100%;box-sizing:border-box;min-height:75px}button{background:#193f3c;color:white;cursor:pointer}p{line-height:1.6}.hint{font-size:14px}#status{padding:12px 0}</style></head><body>
+<h1>Fashion chatbot research messages</h1>
+<p>Participation is voluntary. Please write how you would naturally speak to a fashion assistant. Use your own words, not copied messages or AI-generated text. Include Sri Lankan and/or global clothing topics you know. Do not include names, contact details, private medical information or unnecessary body measurements.</p>
+<p class="hint">This form runs locally. It does not upload or save answers automatically. After downloading your response file, share it with the researcher through the agreed university collection process. Follow the study information and consent arrangements supplied separately by the researcher.</p>
+<section><label for="code">Researcher-assigned participant code (not your name)</label><input id="code" maxlength="40" placeholder="D01">
+<label for="cohort">Researcher-assigned collection group</label><select id="cohort"><option value="">Choose the assigned group</option><option value="train_expansion">Training expansion</option><option value="development">Development cohort</option><option value="reserved_final">Reserved final-test cohort</option></select>
+<label><input type="checkbox" id="consent"> I voluntarily permit these messages to be used for the described university research under the study arrangements given to me.</label></section>
+<div id="questions"></div><p class="hint">For follow-ups, include enough context to explain what you are changing, comparing or referring to. If a task is unclear, leave it blank and tell the researcher rather than copying another participant.</p><button id="download">Download my responses</button><p id="status" role="status"></p>
+<script>
+'use strict';
+const purposes=[
+ ['recommend','Ask for help choosing clothing or a garment design.'],
+ ['explain','Ask the assistant to explain a previous recommendation or ranking. Include the situation you mean.'],
+ ['compare','Ask the assistant to compare two or more clothing or fabric options.'],
+ ['update_preferences','Change an earlier budget, occasion or preference. State the earlier context if needed.'],
+ ['knowledge_question','Ask a general question about a garment, fabric or fashion term.'],
+ ['greeting','Start a conversation naturally, without adding a clothing request.'],
+ ['clarify','Write a short unclear reference that would need clarification. Add separate context if you want the researcher to understand your intention.']
+];
+const fields=[];
+for(const [purpose,instruction] of purposes){
+ const section=document.createElement('section'),heading=document.createElement('h2');heading.textContent=instruction;section.append(heading);
+ for(let index=1;index<=3;index++){
+  const id=purpose+'_'+index,label=document.createElement('label'),input=document.createElement('textarea');
+  input.id=id;input.maxLength=2000;label.htmlFor=id;label.textContent='Message '+index+' — different wording/situation';section.append(label,input);fields.push({purpose,id,input});
+ }
+ const label=document.createElement('label'),context=document.createElement('textarea');context.id=purpose+'_context';context.maxLength=4000;label.htmlFor=context.id;label.textContent='Optional context for these messages (not part of the messages themselves)';section.append(label,context);document.getElementById('questions').append(section);
+}
+let changed=false;document.addEventListener('input',()=>{changed=true;});
+document.getElementById('download').onclick=()=>{
+ try{
+  const code=document.getElementById('code').value.trim(),cohort=document.getElementById('cohort').value;
+  if(!/^[A-Za-z0-9_-]{1,40}$/.test(code)||!cohort||!document.getElementById('consent').checked)throw Error('Provide the assigned code/group and confirm permission.');
+  const records=fields.filter(field=>field.input.value.trim()).map(field=>({id:code+'_'+field.id,participant_id:code,
+   message:field.input.value.trim(),requested_purpose:field.purpose,context:document.getElementById(field.purpose+'_context').value.trim(),
+   reviewed_intent:null,entities:null,slots:null,remove_slots:null,annotation_status:'pending'}));
+  if(!records.length)throw Error('Write at least one message.');
+  const texts=records.map(row=>row.message.normalize('NFKC').toLowerCase().replace(/\s+/g,' ').trim());
+  if(new Set(texts).size!==texts.length)throw Error('Two of your messages are identical. Please use different wording or leave a repeated response blank.');
+  const result={schema:'volunteer_collection_v1',participant_id:code,assigned_cohort:cohort,permission_confirmed_by_participant:true,
+   provenance:'Participant-submitted responses; researcher must verify collection/consent and review labels.',recorded_at:new Date().toISOString(),records};
+  const blob=new Blob([JSON.stringify(result,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=url;a.download='fashion_messages_'+code+'.json';a.click();URL.revokeObjectURL(url);changed=false;
+  document.getElementById('status').textContent='Download requested for '+records.length+' messages. Confirm the file was saved, then share it through the agreed process. No upload occurred.';
+ }catch(error){document.getElementById('status').textContent=error.message;}
+};
+window.addEventListener('beforeunload',event=>{if(changed){event.preventDefault();event.returnValue='Download before leaving.';}});
+</script></body></html>

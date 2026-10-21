@@ -1,0 +1,18 @@
+{
+  "purpose": "Author-written development fixtures, not independent or held-out research evidence",
+  "cases": [
+    {"id":"sl01","group":"sri_lankan","question":"What base fabrics are used for Sri Lankan batik wax decoration?","relevant_ids":["sl_batik_materials"],"review_focus":"Distinguish decorative process from fibre; mention source examples, not guaranteed composition."},
+    {"id":"sl02","group":"sri_lankan","question":"Does Sri Lankan handloom include sarees and upholstery fabrics?","relevant_ids":["sl_handloom_products"],"review_focus":"Explain documented products without unsupported physical-property claims."},
+    {"id":"sl03","group":"sri_lankan","question":"What clothing covers shoulders and knees at the Temple of the Tooth?","relevant_ids":["sl_temple"],"review_focus":"Site-specific guidance; do not generalize to every ceremony."},
+    {"id":"sl04","group":"sri_lankan","question":"Is batik always better than handloom for a Sri Lankan wedding?","relevant_ids":["sl_batik_materials","sl_handloom_products","global_wedding_context"],"review_focus":"Reject universal ranking; ask about hosts, ceremony and actual garment."},
+    {"id":"gl01","group":"global","question":"How do the wedding invitation and local custom guide formality?","relevant_ids":["global_wedding_context"],"review_focus":"Invitation, time, ceremony and local custom; preserve source scope."},
+    {"id":"gl02","group":"global","question":"What does black tie mean for a formal evening wedding tuxedo?","relevant_ids":["global_black_tie"],"review_focus":"Explain the cited convention without universally excluding traditional attire."},
+    {"id":"gl03","group":"global","question":"Is Indonesian batik wax resist dyeing?","relevant_ids":["batik_process"],"review_focus":"Technique only; do not transfer Indonesian symbolism to Sri Lanka."},
+    {"id":"mx01","group":"mixed","question":"Can a traditional garment replace a tuxedo on a black tie wedding invitation?","relevant_ids":["global_black_tie","global_wedding_context"],"review_focus":"Explain source convention and clarify host expectations; no invented permission or ban."},
+    {"id":"mx02","group":"mixed","question":"Does a Sri Lankan batik cotton category prove the GSM and stretch of my fabric?","relevant_ids":["c3_rules","sl_batik_materials"],"review_focus":"No photo-based physical measurement; retain illustrative profile limits."},
+    {"id":"pr01","group":"project","question":"Are Component 2 budget and occasion recommendation scores probabilities?","relevant_ids":["c2_rules"],"review_focus":"Rule points, not probabilities; supplied output needed for individual ranking."},
+    {"id":"pr02","group":"project","question":"Does Component 3 typical profile verify drapability and weight of my photo?","relevant_ids":["c3_rules"],"review_focus":"Illustrative profile not measured properties; no fit guarantee."},
+    {"id":"un01","group":"insufficient_evidence","question":"zxqv987","relevant_ids":[],"review_focus":"Abstain; do not invent evidence."},
+    {"id":"un02","group":"insufficient_evidence","question":"Which exact colours are forbidden at my family's private ceremony tomorrow?","relevant_ids":[],"review_focus":"No personal or current venue knowledge; clarify with hosts. Lexical hits are not an answer."}
+  ]
+}
