@@ -1,0 +1,20 @@
+{
+  "sample_id": "EXAMPLE_NOT_REAL",
+  "image_path": "images/example.png",
+  "source_group": "physical_garment_or_source_id",
+  "split": "unassigned",
+  "garment_type": "unknown",
+  "pattern_type": "unknown",
+  "drape_style": "unknown",
+  "fabric_texture": "unknown",
+  "textile_techniques": [],
+  "source": {
+    "kind": "unknown",
+    "url": null,
+    "license": null,
+    "permission_reference": null
+  },
+  "annotator": null,
+  "review_status": "unreviewed",
+  "notes": "Replace with permitted images and independently reviewed labels."
+}

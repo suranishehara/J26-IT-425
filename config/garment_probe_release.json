@@ -1,0 +1,28 @@
+{
+  "release": "indofashion_probe_01_validation_frozen",
+  "frozen_date": "2026-10-16",
+  "model": "openai/clip-vit-base-patch32",
+  "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+  "labels": [
+    "blouse",
+    "dress",
+    "kurta",
+    "saree"
+  ],
+  "checkpoint": "runtime/adaptation/indofashion_probe_01/probe.safetensors",
+  "checkpoint_sha256": "ad8b483cd2de519805772ff4c359b2ccf834a7ec78813fb91d6560f9bce8cdfc",
+  "taxonomy_sha256": "b44626502e658a73eceb88ded5b7c01c37e2768b58227cdb7439082fc63e9fc3",
+  "training_script_sha256": "92a3a2773e1c89df0435d9a5ae94cb9f49a9c52b4ad634bc147f3cc8e13777d0",
+  "training": {
+    "fit_count": 7200,
+    "internal_holdout_count": 800,
+    "epochs": 200,
+    "selected_epoch": 200,
+    "learning_rate": 0.02,
+    "weight_decay": 0.01,
+    "seed": 42
+  },
+  "validation_report": "runtime/evaluations/indofashion_full_validation_01/report.json",
+  "test_evaluation_performed": false,
+  "scope": "Optional four-class South Asian garment-type classifier. Other attributes and broader Western categories use the general baseline."
+}

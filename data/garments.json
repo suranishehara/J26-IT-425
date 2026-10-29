@@ -1,0 +1,272 @@
+[
+  {
+    "id": "osariya",
+    "name": "Kandyan saree / Osariya",
+    "family": "traditional",
+    "price_lkr": 8500,
+    "fabric": "cotton",
+    "occasions": [
+      "wedding",
+      "festival"
+    ],
+    "weather": [
+      "hot",
+      "mild"
+    ],
+    "colours": [
+      "ivory"
+    ],
+    "styles": [
+      "traditional",
+      "formal"
+    ],
+    "data_status": "illustrative_unverified",
+    "garment_type": "saree",
+    "pattern_type": "solid",
+    "drape_style": "kandyan_osariya",
+    "fabric_texture": "smooth_matte",
+    "textile_techniques": [],
+    "price_source": "illustrative",
+    "image_path": null,
+    "source": {
+      "kind": "illustrative_record",
+      "url": null,
+      "license": null,
+      "image_kind": "synthetic_demonstration_reference"
+    },
+    "attribute_status": "illustrative_unverified",
+    "image_url": "/assets/demo/osariya.png"
+  },
+  {
+    "id": "saree",
+    "name": "Blue saree",
+    "family": "traditional",
+    "price_lkr": 6500,
+    "fabric": "cotton",
+    "occasions": [
+      "wedding",
+      "festival",
+      "office"
+    ],
+    "weather": [
+      "hot",
+      "mild"
+    ],
+    "colours": [
+      "blue"
+    ],
+    "styles": [
+      "traditional",
+      "formal"
+    ],
+    "data_status": "illustrative_unverified",
+    "garment_type": "saree",
+    "pattern_type": "floral",
+    "drape_style": "nivi",
+    "fabric_texture": "smooth_matte",
+    "textile_techniques": [],
+    "price_source": "illustrative",
+    "image_path": null,
+    "source": {
+      "kind": "illustrative_record",
+      "url": null,
+      "license": null,
+      "image_kind": "synthetic_demonstration_reference"
+    },
+    "attribute_status": "illustrative_unverified",
+    "image_url": "/assets/demo/saree.png"
+  },
+  {
+    "id": "dress",
+    "name": "Navy formal dress",
+    "family": "global",
+    "price_lkr": 7500,
+    "fabric": "linen",
+    "occasions": [
+      "wedding",
+      "office"
+    ],
+    "weather": [
+      "hot",
+      "mild"
+    ],
+    "colours": [
+      "blue"
+    ],
+    "styles": [
+      "western",
+      "formal"
+    ],
+    "data_status": "illustrative_unverified",
+    "garment_type": "dress",
+    "pattern_type": "solid",
+    "drape_style": "not_applicable",
+    "fabric_texture": "smooth_matte",
+    "textile_techniques": [],
+    "price_source": "illustrative",
+    "image_path": null,
+    "source": {
+      "kind": "illustrative_record",
+      "url": null,
+      "license": null,
+      "image_kind": "synthetic_demonstration_reference"
+    },
+    "attribute_status": "illustrative_unverified",
+    "image_url": "/assets/demo/dress.png"
+  },
+  {
+    "id": "batik",
+    "name": "Batik wrap dress",
+    "family": "traditional",
+    "price_lkr": 5500,
+    "fabric": "cotton",
+    "occasions": [
+      "casual",
+      "festival"
+    ],
+    "weather": [
+      "hot"
+    ],
+    "colours": [
+      "orange"
+    ],
+    "styles": [
+      "traditional",
+      "casual"
+    ],
+    "data_status": "illustrative_unverified",
+    "garment_type": "dress",
+    "pattern_type": "abstract",
+    "drape_style": "not_applicable",
+    "fabric_texture": "smooth_matte",
+    "textile_techniques": [
+      "batik"
+    ],
+    "price_source": "illustrative",
+    "image_path": null,
+    "source": {
+      "kind": "illustrative_record",
+      "url": null,
+      "license": null,
+      "image_kind": "synthetic_demonstration_reference"
+    },
+    "attribute_status": "illustrative_unverified",
+    "image_url": "/assets/demo/batik.png"
+  },
+  {
+    "id": "kurta",
+    "name": "Handloom kurta",
+    "family": "traditional",
+    "price_lkr": 4500,
+    "fabric": "cotton",
+    "occasions": [
+      "festival",
+      "casual"
+    ],
+    "weather": [
+      "hot",
+      "mild"
+    ],
+    "colours": [
+      "ivory"
+    ],
+    "styles": [
+      "traditional",
+      "casual"
+    ],
+    "data_status": "illustrative_unverified",
+    "garment_type": "kurta",
+    "pattern_type": "solid",
+    "drape_style": "not_applicable",
+    "fabric_texture": "coarse_woven",
+    "textile_techniques": [
+      "handloom"
+    ],
+    "price_source": "illustrative",
+    "image_path": null,
+    "source": {
+      "kind": "illustrative_record",
+      "url": null,
+      "license": null,
+      "image_kind": "synthetic_demonstration_reference"
+    },
+    "attribute_status": "illustrative_unverified",
+    "image_url": "/assets/demo/kurta.png"
+  },
+  {
+    "id": "shirt",
+    "name": "Cotton shirt",
+    "family": "global",
+    "price_lkr": 3500,
+    "fabric": "cotton",
+    "occasions": [
+      "office",
+      "casual"
+    ],
+    "weather": [
+      "hot",
+      "mild"
+    ],
+    "colours": [
+      "white"
+    ],
+    "styles": [
+      "western",
+      "casual"
+    ],
+    "data_status": "illustrative_unverified",
+    "garment_type": "shirt",
+    "pattern_type": "solid",
+    "drape_style": "not_applicable",
+    "fabric_texture": "smooth_matte",
+    "textile_techniques": [],
+    "price_source": "illustrative",
+    "image_path": null,
+    "source": {
+      "kind": "illustrative_record",
+      "url": null,
+      "license": null,
+      "image_kind": "synthetic_demonstration_reference"
+    },
+    "attribute_status": "illustrative_unverified",
+    "image_url": "/assets/demo/shirt.png"
+  },
+  {
+    "id": "blouse",
+    "name": "Ivory blouse",
+    "family": "global",
+    "price_lkr": 3000,
+    "fabric": "cotton",
+    "occasions": [
+      "office",
+      "casual"
+    ],
+    "weather": [
+      "hot",
+      "mild"
+    ],
+    "colours": [
+      "ivory"
+    ],
+    "styles": [
+      "western",
+      "formal"
+    ],
+    "data_status": "illustrative_unverified",
+    "garment_type": "blouse",
+    "pattern_type": "solid",
+    "drape_style": "not_applicable",
+    "fabric_texture": "smooth_matte",
+    "textile_techniques": [],
+    "price_source": "illustrative",
+    "image_path": null,
+    "source": {
+      "kind": "illustrative_record",
+      "url": null,
+      "license": null,
+      "image_kind": "synthetic_demonstration_reference"
+    },
+    "attribute_status": "illustrative_unverified",
+    "image_url": "/assets/demo/blouse.png"
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "status": "proposed_requires_local_expert_review",
+  "source": "User-supplied project research plan; hypotheses, not universal cultural restrictions",
+  "max_bonus": 2,
+  "rules": [
+    {
+      "id": "osariya_wedding",
+      "occasion": "wedding",
+      "relation": "has_drape",
+      "values": [
+        "kandyan_osariya"
+      ],
+      "points": 2,
+      "explanation": "Proposed Sri Lankan occasion guidance: Kandyan/Osariya styling for a wedding."
+    },
+    {
+      "id": "batik_casual",
+      "occasion": "casual",
+      "relation": "uses_textile_technique",
+      "values": [
+        "batik"
+      ],
+      "points": 1,
+      "explanation": "Proposed local-context guidance: batik for casual wear."
+    },
+    {
+      "id": "batik_office",
+      "occasion": "office",
+      "relation": "uses_textile_technique",
+      "values": [
+        "batik"
+      ],
+      "points": 1,
+      "explanation": "Proposed local-context guidance: batik for office wear; workplace expectations vary."
+    },
+    {
+      "id": "handloom_festival",
+      "occasion": "festival",
+      "relation": "uses_textile_technique",
+      "values": [
+        "handloom"
+      ],
+      "points": 1,
+      "explanation": "Proposed local-context guidance: handloom for a festival."
+    }
+  ]
+}

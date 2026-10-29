@@ -1,0 +1,13 @@
+{
+  "release": "indofashion_probe_01_validation_frozen",
+  "final_test_evaluation_performed": true,
+  "evaluation_date": "2026-10-16",
+  "test_report": "runtime/evaluations/indofashion_final_test_01/report.json",
+  "test_images": 2424,
+  "successful_images": 2424,
+  "checkpoint_sha256": "ad8b483cd2de519805772ff4c359b2ccf834a7ec78813fb91d6560f9bce8cdfc",
+  "matched_baseline_accuracy": 0.7000825082508251,
+  "adapted_accuracy": 0.900990099009901,
+  "training_performed_during_evaluation": false,
+  "policy": "Test results are final reporting evidence, not a tuning signal. Original release metadata records the earlier pre-test freeze state."
+}

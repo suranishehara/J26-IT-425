@@ -1,0 +1,6 @@
+{
+  "run_directory": "runtime/adaptation/dinov2_pattern_01",
+  "checkpoint_sha256": "a0e13141f2025b4aa1e62da6ac211ba8d5a6735d2326a8b0148beda518c9207a",
+  "labels": ["solid", "striped", "checked", "floral"],
+  "status": "optional_development_model_not_final_test_validated"
+}

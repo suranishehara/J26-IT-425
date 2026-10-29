@@ -1,0 +1,10 @@
+# Image analysis, graph operations and evaluation support.
+numpy
+Pillow
+scipy
+networkx
+transformers==4.46.3
+huggingface-hub==0.36.0
+safetensors
+accelerate==1.2.1
+mediapipe==1.1.1

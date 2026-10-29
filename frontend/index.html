@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fashion recommendations</title><link rel="stylesheet" href="workspace.css"></head><body>
+<header><div><span class="eyebrow">FASHION STYLING · COMPONENT 2</span><h1>Find an outfit for your occasion</h1></div><nav aria-label="Workspace"><button type="button" data-tab="profile" aria-pressed="false">Your profile</button><button type="button" data-tab="catalogue" aria-pressed="true">Garment catalogue</button><button type="button" data-tab="recommend" aria-pressed="false">Recommendations</button></nav></header>
+<main>
+<form id="profile-workspace" class="workspace" aria-label="Your profile" hidden>
+<section class="panel upload-panel"><h2><span>01</span> Your photo</h2><p class="hint">Optional. Use an evenly lit, front-facing photo of one person with shoulders and hips visible.</p>
+<label>Person photo<input id="profile-photo" type="file" accept="image/png,image/jpeg,image/webp"></label>
+<div class="image-stage"><img id="person-preview" alt="Your selected profile photo" hidden><span id="person-placeholder">Optional person photo</span></div>
+<label class="inline-check"><input id="person-consent" type="checkbox">I have permission to analyse this photo locally.</label><button id="analyse-person" type="button">Analyse person photo</button><label class="inline-check"><input id="show-person-overlay" type="checkbox" checked>Show landmarks and sampled regions</label><small id="person-analysis-status" role="status">Optional local analysis. Photos are processed in memory and are not saved.</small><button id="clear-profile" type="button">Clear profile</button></section>
+<section class="panel"><h2><span>02</span> Optional measurements</h2><p class="hint">Enter your own measurements. Leave any field blank if unknown.</p>
+<label>Units<select name="unit"><option value="cm">Centimetres (cm)</option><option value="in">Inches (in)</option></select></label>
+<div class="preference-fields">
+<label>Height<input name="height" type="number" min="0.01" step="0.01"></label>
+<label>Chest / bust<input name="chest" type="number" min="0.01" step="0.01"></label>
+<label>Waist<input name="waist" type="number" min="0.01" step="0.01"></label>
+<label>Hips<input name="hips" type="number" min="0.01" step="0.01"></label>
+<label>Shoulder width<input name="shoulder_width" type="number" min="0.01" step="0.01"></label>
+<label>Inseam<input name="inseam" type="number" min="0.01" step="0.01"></label>
+</div><label>Preferred fit<select name="fit_preference"><option value="no_preference">No preference</option><option value="fitted">Fitted</option><option value="regular">Regular</option><option value="relaxed">Relaxed</option></select></label>
+<small>These are self-reported measurements. Size compatibility will become available when garments have sizing records.</small></section>
+<section class="panel"><h2><span>03</span> Personalise recommendations</h2>
+<label>Preferred colours<input name="colours" placeholder="blue, ivory"></label>
+<label>Preferred styles<input name="styles" placeholder="traditional, formal"></label>
+<details id="person-estimates"><summary>Review optional photo estimates</summary>
+<label>Monk reference (appearance only)<select name="skin_tone_mst"><option value="">Unknown / do not use</option><option value="1">Monk 1</option><option value="2">Monk 2</option><option value="3">Monk 3</option><option value="4">Monk 4</option><option value="5">Monk 5</option><option value="6">Monk 6</option><option value="7">Monk 7</option><option value="8">Monk 8</option><option value="9">Monk 9</option><option value="10">Monk 10</option></select></label>
+<div id="skin-sample" class="hint"></div><label>Projected shoulder / hip landmark ratio<input name="projected_shoulder_hip_ratio" type="number" min="0.01" max="10" step="0.001" placeholder="Optional image-space ratio"></label>
+<small>This ratio is not a circumference or a body-shape category. Tone estimates depend on lighting; both fields are uncalibrated.</small>
+<label class="inline-check"><input name="analysis_reviewed" type="checkbox">I reviewed or corrected these optional estimates.</label></details><button type="submit">Apply profile →</button><p id="profile-status" role="status" aria-live="polite">Apply to use your colour and style preferences in recommendations.</p>
+<div id="profile-summary" class="profile-summary"></div><small class="panel-foot">Applied profile details last until this page is refreshed. Measurements are sent to the local server for validation and are not saved to the catalogue.</small></section></form>
+<section id="catalogue-workspace" class="workspace" aria-label="Garment catalogue">
+ <section class="panel upload-panel"><h2><span>01</span> Garment image</h2><p class="hint">Upload a reference to analyse its visible attributes.</p>
+ <label>Garment reference<input id="garment-photo" type="file" accept="image/png,image/jpeg,image/webp"></label>
+ <div class="image-stage"><img id="analysis-preview" alt="Garment to analyse" hidden><span id="upload-placeholder">Your garment preview</span></div>
+ <label>Garment classifier<select id="classifier-mode"><option value="zero_shot">General CLIP · all garment categories</option><option value="indofashion_probe">Adapted IndoFashion · blouse / dress / kurta / saree</option></select></label><button id="analyse" type="button">Analyse garment →</button><p id="analysis-status" role="status" aria-live="polite">Choose an image to get started.</p></section>
+ <section class="panel"><h2><span>02</span> Review attributes</h2><p class="hint">Check each suggestion and correct it before saving.</p><div id="attribute-results"><p class="empty">Suggested attributes will appear here.</p></div><details id="explanation-controls"><summary>Optional visual explanation</summary><label>Explain prediction<select id="explanation-attribute"><option value="garment_type">Garment type</option><option value="pattern_type">Pattern</option><option value="drape_style">Drape style</option><option value="fabric_texture">Visible texture</option></select></label><button id="explain-garment" type="button" disabled>Generate Grad-CAM</button><p id="explanation-status" role="status"></p><div id="explanation-images"></div></details><small class="panel-foot">Relative scores compare candidate labels. They are not measured accuracy.</small></section>
+ <section class="panel"><h2><span>03</span> Save to catalogue</h2><div id="review-container"><p class="empty">Analyse a garment to enter its catalogue details.</p></div></section>
+</section>
+<section id="recommend-workspace" class="workspace" aria-label="Recommendations" hidden>
+ <section class="panel"><h2><span>01</span> Your preferences</h2><form id="preferences">
+ <div class="preference-fields"><label>Occasion<select name="occasion"><option value="wedding">Wedding</option><option value="office">Office</option><option value="casual">Casual</option><option value="festival">Festival</option></select></label>
+ <label>Budget (LKR)<input name="budget" type="number" min="1" value="10000" required></label>
+ <label>Weather<select name="weather"><option value="hot">Hot</option><option value="mild">Mild</option><option value="cool">Cool</option></select></label>
+ <label>Preferred colours<input name="colours" placeholder="blue, ivory"></label>
+ <label>Garment type<select name="garment_type"><option value="">Any garment</option><option value="shirt">Shirt</option><option value="blouse">Blouse</option><option value="kurta">Kurta</option><option value="dress">Dress</option><option value="saree">Saree</option></select></label>
+ <label>Pattern<select name="pattern"><option value="">Any pattern</option><option value="solid">Solid</option><option value="floral">Floral</option><option value="striped">Striped</option><option value="checked">Checked</option><option value="geometric">Geometric</option><option value="abstract">Abstract</option></select></label>
+ <label class="wide">Preferred styles<input name="styles" placeholder="traditional, formal"></label>
+ <label class="wide">Ranking mode<select name="recommendation_mode"><option value="baseline">Baseline · preferences and context</option><option value="sri_lanka_guidance">Sri Lankan guidance · proposed rules</option></select></label></div>
+ <label class="inline-check"><input name="only_size_compatible" type="checkbox">Only show size-compatible garments</label><button>Find recommendations →</button><small>Type and pattern are soft preferences. Saved garments join the catalogue.</small></form></section>
+ <section class="panel"><h2><span>02</span> Recommended for you</h2><p id="status" role="status">Choose preferences to find outfits.</p><div id="results" class="results"></div><div id="pagination" class="pagination" hidden><button id="previous-result" type="button">← Previous</button><span id="page-label"></span><button id="next-result" type="button">Next →</button></div></section>
+ <section class="panel" id="garment-detail"><h2><span>03</span> Garment details</h2><div id="detail-content"><p class="empty">Select a recommendation to view its image and reasons.</p></div></section>
+</section>
+</main><script src="workspace.js"></script><script src="profile.js"></script><script src="person-analysis.js"></script><script src="recommendations.js"></script><script src="analysis.js"></script><script src="explanations.js"></script><script src="local-model.js"></script></body></html>

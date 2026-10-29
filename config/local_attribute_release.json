@@ -1,0 +1,5 @@
+{
+  "run_directory": "runtime/adaptation/sri_lankan_drape_clip_01",
+  "checkpoint_sha256": "140e32b965cfe668c43070906a831852fed2b7a4b388a951e4ae6937d812e44a",
+  "status": "trained_local_heads_requires_external_validation"
+}
