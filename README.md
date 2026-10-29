@@ -44,7 +44,7 @@ No percentage-complete estimate is claimed: a working application and a complete
 
 ### Existing prepared environment
 
-Open PowerShell inside `component-1-virtual-tryon`:
+Open PowerShell inside `component-3-virtual-tryon`:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
@@ -454,7 +454,7 @@ Polling state is in memory only. Existing files remain in the job directory, but
 
 ## 14. Remaining work and resume point
 
-When the user explicitly resumes Component 1:
+When the user explicitly resumes Component 3:
 
 1. Preserve representative outputs and reviewed score files; document current failure cases.
 2. Improve the evaluation workflow so re-export does not overwrite scored data; add stable identifiers and stronger run provenance.
