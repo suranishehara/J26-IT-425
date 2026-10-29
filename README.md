@@ -2,7 +2,7 @@
 
 **New laptop setup:** [Installation.md](Installation.md).
 
-Component 2 helps a user choose garments and understand **why** they were recommended. It combines garment-image analysis, an optional personal profile, a reviewed catalogue, a lightweight knowledge graph and explainable ranking.
+Component 1 helps a user choose garments and understand **why** they were recommended. It combines garment-image analysis, an optional personal profile, a reviewed catalogue, a lightweight knowledge graph and explainable ranking.
 
 ## Contents
 
@@ -46,7 +46,7 @@ Component 2 helps a user choose garments and understand **why** they were recomm
 
 ### Existing environment — PowerShell
 
-From this Component 2 folder:
+From this Component 1 folder:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
