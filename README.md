@@ -1,8 +1,8 @@
-# Component 1 — Virtual Try-On and Draping
+# Component 3 — Virtual Try-On and Draping
 
 **New laptop setup:** [Installation.md](Installation.md).
 
-Component 1 generates an experimental image of a person wearing a supplied garment reference. The current application uses pretrained **CatVTON**, automatic **SegFormer clothing masks**, user mask corrections and outside-mask compositing. A separate **VITON-HD benchmark pipeline** is retained.
+Component 3 generates an experimental image of a person wearing a supplied garment reference. The current application uses pretrained **CatVTON**, automatic **SegFormer clothing masks**, user mask corrections and outside-mask compositing. A separate **VITON-HD benchmark pipeline** is retained.
 
 ## Contents
 
