@@ -1,4 +1,4 @@
-# Component 2 — Sri Lankan-Aware Fashion Analysis and Recommendations
+# Component 1 — Sri Lankan-Aware Fashion Analysis and Recommendations
 
 **New laptop setup:** [Installation.md](Installation.md).
 
