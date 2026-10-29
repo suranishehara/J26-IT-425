@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "status": "experimental_validation_only",
+  "run_directory": "runtime/training/convnextv2_nine_categories_01",
+  "checkpoint_sha256": "7a32c9ebb487d314ea148d51d8042577de0ac89bea2579055d01a55428243aa9",
+  "report_sha256": "0a29d03729b1bcef38088f54e56c6156c80daf2732bbd2f5738798b9fa72a23d",
+  "manifest_sha256": "a4341ee939350b8b0b161b3d3bbf276137a1aa66965b42178d30ddfa13e9ec68",
+  "labels": ["cotton", "denim", "leather", "linen", "nylon", "polyester", "silk", "viscose", "wool"],
+  "notice": "ConvNeXt V2-Tiny experimental opt-in. CC-BY-NC-4.0 non-commercial research checkpoint. Raw scores only; no calibrated temperature activated. Final test, independent calibration and external unknown-input evaluation remain outstanding."
+}

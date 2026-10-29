@@ -1,0 +1,2 @@
+# Initial prototype environment, Python 3.12; no classifier/GPU dependencies yet.
+Pillow==12.3.0

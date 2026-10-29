@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "status": "experimental_validation_only",
+  "run_directory": "runtime/training/convnext_tiny_finetune_01",
+  "checkpoint_sha256": "aa0cd052667b718e5854039a0098e71d0292cfbcc31efcc4986227f750dc766e",
+  "report_sha256": "59b3ef5060b5924e53d5a86528c279cc86a4568365a7b83ebb5aa3382db5194d",
+  "manifest_sha256": "3c888298dd97a636cb336c878e064700fa39f0e441fd02e3a5a8b8a4aa9ebbca",
+  "notice": "Previous partially fine-tuned ConvNeXt V1-Tiny, selectable for comparison."
+}

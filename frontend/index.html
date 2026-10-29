@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Component 3 · Fabric to design</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header><small>FASHION STYLING · COMPONENT 3</small><h1>From fabric to a design idea</h1><p>Research prototype · reviewed properties, transparent suggestions</p></header>
+<main>
+<form id="workspace">
+<section aria-labelledby="photo-heading"><h2 id="photo-heading">01 · Fabric photograph</h2>
+<label>Fabric close-up<input type="file" id="photo" accept="image/png,image/jpeg,image/webp"></label>
+<label class="check"><input type="checkbox" id="permission">I have permission to process this image locally.</label>
+<label>Fabric classifier<select id="analysis-mode"><option value="convnext_v2" selected>Experimental ConvNeXt V2-Tiny</option><option value="convnext_v1">Experimental ConvNeXt-Tiny</option><option value="efficientnet_b0">Experimental EfficientNet-B0</option></select></label>
+<p id="model-status" class="hint" role="status">Checking optional classifier availability…</p>
+<button type="button" id="analyse">Analyse photograph</button>
+<p id="photo-status" role="status">Upload an evenly lit fabric close-up, or test using reviewed metadata only.</p>
+<img id="preview" alt="Fabric reference" hidden>
+<div id="suggestions" aria-live="polite"></div>
+</section>
+<section aria-labelledby="properties-heading"><h2 id="properties-heading">02 · Attributes and properties</h2>
+<p class="hint">Use a saved sample to fill its recorded details, or enter only what you know. Unknown fields can stay unknown.</p>
+<label>Fabric sample<select id="specimen" disabled><option value="">Manual properties below</option></select></label>
+<p id="specimen-status" role="status">Loading saved samples…</p>
+<label>Typical fabric profile<select id="typical-profile"><option value="">Choose a variant</option></select></label>
+<button type="button" id="use-typical">Use typical fabric profile</button>
+<button type="button" id="clear-typical" hidden>Return to manual properties</button>
+<p id="typical-status" class="hint" role="status"></p>
+<details><summary>Save a sample for reuse</summary>
+<p class="hint">Save documented properties only. No photograph or body measurements are stored. Records are user-reviewed, not independently verified; corrections create new records.</p>
+<label>New specimen name / sample reference<input id="specimen-name" maxlength="120"></label>
+<label>Property reviewer ID<input id="specimen-reviewer" maxlength="120"></label>
+<button type="button" id="save-specimen">Save reviewed manual properties</button>
+</details>
+<details><summary>Import / export documented catalogue</summary>
+<p class="hint">Import JSON records with a source and reference for each property. Existing samples are preserved. Up to 200 records / 500 KB per import. No photographs or measurements of people are included.</p>
+<label>Catalogue JSON<input type="file" id="catalogue-file" accept="application/json,.json"></label>
+<label class="check"><input type="checkbox" id="catalogue-reviewed">I reviewed these sample records and their property sources.</label>
+<button type="button" id="import-catalogue">Import documented samples</button>
+<button type="button" id="export-catalogue">Export saved catalogue</button>
+<p id="catalogue-status" role="status"></p>
+</details>
+<fieldset id="manual-fabric"><legend>Manual fabric record</legend>
+<label>Reviewed fabric category<select id="fabric-category"></select></label>
+<details id="optional-labels"><summary>Optional material, technique and appearance</summary>
+<div class="grid"><label>Material (known composition)<select id="material"></select></label><label>Production technique<select id="technique"></select></label><label>Visible pattern<select id="pattern"></select></label><label>Visible texture<select id="texture"></select></label></div>
+</details>
+<h3>Known physical properties</h3>
+<p class="hint">These two properties help rank designs. Leave unknown if not documented.</p>
+<div class="grid"><label>Drapability<select id="drapability"><option>unknown</option><option>fluid</option><option>moderate</option><option>structured</option></select></label><label>Weight band<select id="weight"><option>unknown</option><option>light</option><option>medium</option><option>heavy</option></select></label></div>
+<details id="optional-measurements"><summary>Optional GSM and stretch measurements</summary>
+<div class="grid"><label>Weight (g/m²), optional<input id="gsm" type="number" min="0.01" max="2000" step="any"></label><label>Stretch (%), optional<input id="stretch" type="number" min="0" max="500" step="any"></label></div>
+</details>
+<div id="manual-provenance">
+<label>Source for entered properties<select id="source"><option value="unknown">Unknown / no property data</option><option value="user_measured">My documented observation / measurement</option><option value="supplier_documented">Supplier document</option><option value="expert_reviewed">Expert review</option></select></label>
+<label>Measurement / document reference<input id="reference" maxlength="500" placeholder="Sample ID, test method or supplier document reference"></label>
+</div>
+<details><summary>Label and property guidance</summary><p class="hint">A category suggestion never fills confirmed composition or properties. Denim is a fabric category; cotton mixed does not identify a specific blend. Cotton/silk describe material; batik/handloom describe techniques. Unknown is valid.</p><p class="hint">Only enter properties supported by the cited record. A shared source applies to all entries here. Weight bands/drapability need a consistent protocol; GSM does not automatically imply drape.</p></details>
+</fieldset>
+<div id="saved-provenance" hidden></div>
+<button type="button" id="check-fabric">Check fabric record</button>
+<div id="fabric-check" role="status" aria-live="polite"><p class="hint">Apply a photo category or enter details manually. Leave unknown details blank, then check the record before continuing.</p></div>
+</section>
+<section aria-labelledby="profile-heading"><h2 id="profile-heading">03 · Measurements and style</h2><p>Enter measurements you know. Uses Component 2's shared validator, not photographic body estimation.</p>
+<div class="grid"><label>Units<select id="unit"><option value="cm">Centimetres</option><option value="in">Inches</option></select></label>
+<label>Desired fit<select id="fit"><option value="no_preference">No preference</option><option value="regular">Regular</option><option value="relaxed">Relaxed</option><option value="fitted">Fitted (not supported by starter ease rules)</option></select></label></div>
+<div class="grid" id="measurements"></div>
+<div class="grid"><label>Style<select id="style"></select></label><label>Preferred silhouette<select id="silhouette"><option value="any">Any design</option></select></label></div>
+<label class="check"><input type="checkbox" id="reviewed" required>I reviewed the labels and property references. Unknown fields are left unknown.</label>
+<button id="recommend" type="submit">Suggest garment designs →</button><p id="status" role="status"></p>
+<label class="check"><input type="checkbox" id="compare-properties">Compare against style/measurement-only baseline (research diagnostic).</label>
+<details><summary>Measurement and ease limitations</summary><p class="hint">No body-shape grouping, skin-tone scoring or negative ease. Measurements are not saved. Draft circumference = body measurement + illustrative design ease; seam allowance is separate.</p></details>
+</section>
+<section aria-labelledby="design-heading"><h2 id="design-heading">04 · Provisional design ideas</h2><p id="rule-status" class="hint"></p><div id="warnings"></div><div id="results"><p>Your design ideas and rule explanations will appear here.</p></div></section>
+</form>
+</main><script src="app.js"></script></body></html>

@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "status": "experimental_validation_only",
+  "run_directory": "runtime/training/convnextv2_tiny_pilot_01",
+  "checkpoint_sha256": "3eaf7f2f044e18561fba860a71a4814555ab10f677a5dba463a5607c1e91bf86",
+  "report_sha256": "4e4497a074b18a56aa41b60fc0895e87bd1f93f29e4d74ee8266e690c1fd6373",
+  "manifest_sha256": "3c888298dd97a636cb336c878e064700fa39f0e441fd02e3a5a8b8a4aa9ebbca",
+  "notice": "Historical seven-category ConvNeXt V2 release; retained for explicit rollback only. Non-commercial research; uncalibrated scores."
+}

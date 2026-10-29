@@ -1,0 +1,5 @@
+# New real-photo collection — category expansion in preparation
+
+Category-folder images have now been supplied for cotton, denim, polyester, silk, viscose, wool, linen, nylon and leather. The user excluded cotton_mixed from the next model; do not collect it for the planned nine-category candidate. Filename-family, duplicate/source grouping and label review remain necessary before splitting. No real attribute heads have been trained and this collection has not been certified as independent evaluation data. Follow `docs/ADDED_CATEGORIES.md` for the revised category scope and `docs/INDEPENDENT_RESEARCH_PIPELINE.md` for provenance/attribute collection. Keep all photos of one specimen/source batch in one split; do not rename provider images and call them independent.
+
+The preparation tool inventories paths/hashes only. It deliberately leaves labels, permissions, reviewer, specimen/source IDs and splits unset. Do not tick assertions or assign production techniques from filenames or appearance alone. Unknown is `null`, not a negative label. Batik and handloom may both be true.

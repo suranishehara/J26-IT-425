@@ -1,0 +1,23 @@
+{
+  "notice": "Documentation template only: no real image, label or measurement is asserted.",
+  "image_id": "EXAMPLE_ONLY",
+  "path": "images/EXAMPLE_ONLY.jpg",
+  "specimen_id": "EXAMPLE_SPECIMEN",
+  "source_group_id": "EXAMPLE_SOURCE",
+  "image_kind": "real",
+  "region": "unknown",
+  "source_reference": "REQUIRED_BEFORE_USE",
+  "permission_reference": "REQUIRED_BEFORE_USE",
+  "permission_confirmed": false,
+  "labels": {
+    "material": "unknown",
+    "techniques": [],
+    "technique_labels_complete": false,
+    "weave": "unknown",
+    "pattern_type": "unknown",
+    "fabric_texture": "unknown"
+  },
+  "properties": {},
+  "reviewer": null,
+  "split": "unassigned"
+}

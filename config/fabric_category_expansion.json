@@ -1,0 +1,9 @@
+{
+  "status": "nine_category_preparation_enabled_requires_retraining",
+  "labels": ["cotton", "denim", "leather", "linen", "nylon", "polyester", "silk", "viscose", "wool"],
+  "excluded_labels": ["cotton_mixed"],
+  "unsupported_prediction_heads": ["batik", "handloom", "pattern_type", "weave", "fabric_texture"],
+  "attribute_policy": "Not model-supported for now; these are attributes, not entries in the material-category classifier. No missing label becomes a negative.",
+  "active_release_changed": false,
+  "notice": "User-requested nine-category candidate. Not an inference release. Existing seven-output checkpoints keep their original mapping; no output is removed or relabelled in place. Genuine leather confirmed by user; source/label assertions and split integrity require audit."
+}

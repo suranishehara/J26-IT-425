@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "status": "experimental_validation_only",
+  "run_directory": "runtime/training/efficientnet_b0_finetune_01",
+  "checkpoint_sha256": "8550a8b49bc911e83d55179cb0e67a239dd2e01dc308b6a1d8f779c15bf6b73a",
+  "report_sha256": "579e2c881f222e0530544acedd9d6db209c25c0054511579633170720e8bc888",
+  "manifest_sha256": "3c888298dd97a636cb336c878e064700fa39f0e441fd02e3a5a8b8a4aa9ebbca",
+  "notice": "Previous EfficientNet-B0 selection retained for deliberate rollback; not the active release file."
+}

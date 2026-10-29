@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "rule_version": "prototype-0.1",
+  "review": {"status": "pending", "reviewer": "", "reference": ""},
+  "weights": {"style": 2, "silhouette": 3, "drapability": 3, "weight_band": 2},
+  "relaxed_extra_cm": 2,
+  "designs": [
+    {"id": "relaxed_tunic", "name": "Relaxed tunic / kurta", "styles": ["casual", "traditional"], "drapability": ["moderate", "fluid"], "weight": ["light", "medium"], "ease": {"chest": [10, 14], "waist": [10, 16], "hips": [10, 14]}},
+    {"id": "structured_shirt", "name": "Structured shirt / blouse", "styles": ["office", "casual"], "drapability": ["structured", "moderate"], "weight": ["light", "medium"], "ease": {"chest": [6, 10], "waist": [6, 12]}},
+    {"id": "a_line_dress", "name": "A-line dress", "styles": ["casual", "formal", "traditional"], "drapability": ["moderate", "structured"], "weight": ["light", "medium"], "ease": {"chest": [6, 10], "waist": [8, 14], "hips": [10, 16]}},
+    {"id": "flowing_skirt", "name": "Flowing gathered skirt", "styles": ["casual", "formal", "traditional"], "drapability": ["fluid"], "weight": ["light"], "ease": {"waist": [2, 4], "hips": [12, 20]}}
+  ]
+}
