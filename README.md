@@ -14,6 +14,7 @@ This README documents **implemented functionality, prepared data, executed exper
 **Application:** [http://localhost:8003/](http://localhost:8003/)  
 **User guide:** [Complete user manual with 36 manual test cases](USER_MANUAL.md)  
 **Trained NLP evidence:** [Full SIMMC experiment report](docs/SIMMC_NLP_EXPERIMENT.md)
+**Repository:** https://github.com/suranishehara/J26-IT-425
 
 ## 1. Implemented functionality
 
