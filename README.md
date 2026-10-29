@@ -33,11 +33,13 @@ The question answered by this component is:
 
 | Component | Responsibility |
 |---|---|
-| Component 1 | Virtual try-on and draping work, maintained separately |
-| Component 2 | Existing-garment analysis and outfit recommendation; shared taxonomy/measurement validation |
-| Component 3 | Fabric-category suggestions and measurement/property-aware garment-design ideas |
+| Component 1 | Existing-garment analysis and outfit recommendation; shared taxonomy/measurement validation  |
+| Component 2 | Fabric-category suggestions and measurement/property-aware garment-design ideas |
+| Component 3 | Virtual try-on and draping work, maintained separately |
 
-Component 3 does not generate a try-on image, sewing pattern or fit-certified finished garment. It does not measure the body from the fabric photograph. Category/material, production technique, pattern, weave, surface texture and physical drapability are distinct concepts.
+
+
+Component 2 does not generate a try-on image, sewing pattern or fit-certified finished garment. It does not measure the body from the fabric photograph. Category/material, production technique, pattern, weave, surface texture and physical drapability are distinct concepts.
 
 **Current result: a working end-to-end prototype, not fully completed research validation.** The previously discussed approximately 75% completion estimate was a planning judgement, not a measured acceptance metric.
 
@@ -448,18 +450,18 @@ These are not cutting-pattern dimensions. Seam allowance, shrinkage, constructio
 
 Validator checks include unique design IDs, valid vocabularies, finite/nonnegative numbers and ordered ease ranges. Reviewed status needs a reviewer/reference, but field validation is not proof of actual review. Configuration editing is local-file work; web inspection is read-only. Baseline and property-aware runs use one shared snapshot.
 
-## 7. Connection to Component 2
+## 7. Connection to Component 1
 
 `backend/shared_contract.py` loads these sibling modules read-only:
 
 ~~~text
-../component-2-fashion-recommendation/backend/user_profile.py
-../component-2-fashion-recommendation/backend/taxonomy.py
+../component-1-fashion-recommendation/backend/user_profile.py
+../component-1-fashion-recommendation/backend/taxonomy.py
 ~~~
 
 Reused: measurement fields/validation, unit/fit handling, pattern/texture vocabulary and taxonomy version. Health reports shared-module identity. Keep the sibling folder available; its web server need not run.
 
-Not automatically reused: Component 2's classifier, skin-tone/body-shape image analysis, recommender, saved profile or catalogue. No Component 2 implementation was altered. Garment `drape_style` describes arrangement; material `drapability` describes bending/hanging, so one does not substitute for the other.
+Not automatically reused: Component 2's classifier, skin-tone/body-shape image analysis, recommender, saved profile or catalogue. No Component 1 implementation was altered. Garment `drape_style` describes arrangement; material `drapability` describes bending/hanging, so one does not substitute for the other.
 
 ## 8. Environment and running the app
 
@@ -468,7 +470,7 @@ Not automatically reused: Component 2's classifier, skin-tone/body-shape image a
 PowerShell accepts forward-slash Windows paths as used below:
 
 ~~~powershell
-Set-Location 'C:/Users/Ravindu/Videos/Component 1 – Virtual Try-On and Draping/component-3-fabric-design'
+Set-Location 'C:/Users/Ravindu/Videos/Component 3 – Virtual Try-On and Draping/component-3-fabric-design'
 ./.venv/Scripts/Activate.ps1
 ./.venv/Scripts/python.exe backend/app.py
 ~~~
