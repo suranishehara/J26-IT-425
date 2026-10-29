@@ -1,5 +1,5 @@
 # RP_Planner_Test_Repo
-# Component 3 — Fabric-Aware Garment Design Recommendation
+# Component 2 — Fabric-Aware Garment Design Recommendation
 
 **New laptop setup:** [Installation.md](Installation.md), including the required shared Component 2 source files.
 
