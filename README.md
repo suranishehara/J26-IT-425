@@ -1,4 +1,4 @@
-# Component 1 — Sri Lankan-Aware Fashion Analysis and Recommendations
+# Component 1 — Culture Context Aware Recommendation Engine
 
 **New laptop setup:** [Installation.md](Installation.md).
 
