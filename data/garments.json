@@ -1,0 +1,11 @@
+{
+  "garments": [
+    {"id":"linen-coord","name":"Linen co-ord set","family":"global","category":"set","colour":"#8b9d83","supportsPrint":false},
+    {"id":"navy-dress","name":"Navy formal dress","family":"global","category":"dress","colour":"#273a59","supportsPrint":false},
+    {"id":"cotton-shirt","name":"Cotton shirt","family":"global","category":"upper-body","colour":"#b68a58","supportsPrint":false},
+    {"id":"kandyan-saree","name":"Kandyan saree","family":"traditional","category":"saree","colour":"#9d3343","supportsPrint":true},
+    {"id":"osariya","name":"Osariya","family":"traditional","category":"saree","colour":"#d0a53d","supportsPrint":true},
+    {"id":"batik-dress","name":"Batik dress","family":"traditional","category":"dress","colour":"#276c70","supportsPrint":true},
+    {"id":"handloom-kurta","name":"Handloom kurta","family":"traditional","category":"upper-body","colour":"#85583c","supportsPrint":true}
+  ]
+}

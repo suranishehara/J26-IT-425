@@ -1,0 +1,2 @@
+sample_id,subject_id,garment_id,person_image,garment_image,reference_tryon_image,garment_family,garment_type,print_type,dominant_colour,fabric,drape_style,pleat_style,front_fall_style,capture_lighting,consent_version,source_licence,split,quality_checked,notes
+SL001,P001,G001,SL001.jpg,SL001.jpg,SL001.jpg,traditional,batik_dress,batik,blue,cotton,soft,not_applicable,not_applicable,even,consent_v1,participant_consent,train,no,template example replace before analysis

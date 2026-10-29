@@ -1,0 +1,17 @@
+.venv/
+runtime/models/
+__pycache__/
+*.py[cod]
+runtime/uploads/*
+!runtime/uploads/.gitkeep
+runtime/outputs/*
+!runtime/outputs/.gitkeep
+external/VITON-HD/checkpoints/
+external/VITON-HD/datasets/
+external/VITON-HD/results/
+data/local_sri_lanka/person_images/*
+!data/local_sri_lanka/person_images/.gitkeep
+data/local_sri_lanka/garment_images/*
+!data/local_sri_lanka/garment_images/.gitkeep
+data/local_sri_lanka/reference_tryon_images/*
+!data/local_sri_lanka/reference_tryon_images/.gitkeep

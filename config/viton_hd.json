@@ -1,0 +1,15 @@
+{
+  "model": "VITON-HD",
+  "mode": "inference",
+  "device": "cuda:0",
+  "batch_size": 1,
+  "input_width": 768,
+  "input_height": 1024,
+  "checkpoint_directory": "external/VITON-HD/checkpoints",
+  "dataset_directory": "external/VITON-HD/datasets",
+  "result_directory": "runtime/outputs/viton-hd",
+  "checkpoint_files": ["seg_final.pth", "gmm_final.pth", "alias_final.pth"],
+  "dataset_mode": "test",
+  "dataset_list": "test_pairs_pilot.txt",
+  "research_only": true
+}

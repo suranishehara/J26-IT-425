@@ -1,0 +1,8 @@
+# Install into a dedicated environment after creating .venv.
+# The official VITON-HD code uses torchgeometry; retain this for compatibility.
+torch
+torchvision
+opencv-python
+torchgeometry
+Pillow
+numpy
