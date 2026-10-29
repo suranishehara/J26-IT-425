@@ -1,0 +1,21 @@
+{
+  "purpose": "Author-written knowledge-expansion development fixtures; provisional relevance labels, not independent evaluation or a reserved final test",
+  "cases": [
+    {"id":"ke01","group":"sri_lankan","question":"Which fibres does EDB mention for Sri Lankan handloom textiles?","relevant_ids":["sl_handloom_materials"],"review_focus":"Cotton and silk examples, not composition verification of a specific item."},
+    {"id":"ke02","group":"sri_lankan","question":"Are sarongs and shawls included among Sri Lankan handloom garments?","relevant_ids":["sl_handloom_garments"],"review_focus":"Product forms, not event permission or a gender restriction."},
+    {"id":"ke03","group":"sri_lankan","question":"What is the cottage production and weaving heritage context of Sri Lankan handloom?","relevant_ids":["sl_handloom_craft"],"review_focus":"Industry context must not become product ethical certification."},
+    {"id":"ke04","group":"global","question":"What should I check for a business casual workplace dress code?","relevant_ids":["global_business_casual"],"review_focus":"Give publisher examples and defer to employer policy."},
+    {"id":"ke05","group":"global","question":"What does business formal mean for a suit and jacket?","relevant_ids":["global_business_formal"],"review_focus":"Western publisher convention, not a mandatory Sri Lankan office rule."},
+    {"id":"ke06","group":"global","question":"What does a dressy casual invitation mean?","relevant_ids":["global_dressy_casual"],"review_focus":"Explain relative formality; do not equate every ambiguous code."},
+    {"id":"ke07","group":"global","question":"What is semi-formal cocktail event attire?","relevant_ids":["global_semi_formal"],"review_focus":"Use scoped examples, not a ban on traditional alternatives."},
+    {"id":"ke08","group":"global","question":"Does black tie optional allow a dark suit instead of a tuxedo?","relevant_ids":["global_black_tie_optional"],"review_focus":"Do not confuse optional with the stricter black-tie entry."},
+    {"id":"ke09","group":"global","question":"What does white tie mean, including tailcoat or evening gown?","relevant_ids":["global_white_tie"],"review_focus":"Publisher formalwear framework, not a global cultural hierarchy."},
+    {"id":"ke10","group":"global","question":"How do warp and weft alternate in plain weave?","relevant_ids":["global_plain_weave"],"review_focus":"Construction definition does not identify fibre or GSM."},
+    {"id":"ke11","group":"global","question":"Is satin a weave or does it prove silk fibre composition?","relevant_ids":["global_satin_weave"],"review_focus":"Distinguish weave from fibre; composition needs a separate record."},
+    {"id":"ke12","group":"global","question":"What gives velvet its raised pile loops and texture?","relevant_ids":["global_velvet_pile"],"review_focus":"Describe construction, not photo-based physical-property verification."},
+    {"id":"ke13","group":"global","question":"What treatments do garment care labels cover for washing and ironing?","relevant_ids":["global_care_labels"],"review_focus":"Care-label guidance, not a guessed temperature from material name."},
+    {"id":"ke14","group":"mixed","question":"Does a Sri Lankan handloom sarong automatically meet a black tie optional invitation?","relevant_ids":["sl_handloom_garments","global_black_tie_optional"],"review_focus":"No automatic permission or ban; clarify host expectations."},
+    {"id":"ke15","group":"insufficient_evidence","question":"What exact uniform will my employer require next Monday?","relevant_ids":[],"review_focus":"No employer identity or policy provided; retrieval overlap is not an answer."},
+    {"id":"ke16","group":"insufficient_evidence","question":"zxqv987","relevant_ids":[],"review_focus":"No evidence; abstain rather than inventing a source."}
+  ]
+}

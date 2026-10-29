@@ -1,0 +1,6 @@
+{
+  "provenance": "Replace with contributor collection method, permission and annotation details; omit names and private data",
+  "records": [
+    {"id":"user001_turn01","family_id":"family001","conversation_id":"dialogue001","split":"train","text":"REPLACE_WITH_PERMITTED_MESSAGE","intent":null,"entities":null,"slots":null,"remove_slots":null,"annotation_status":"pending","reviewer_ids":[],"permission_confirmed":false}
+  ]
+}
